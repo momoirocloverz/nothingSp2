@@ -1,0 +1,590 @@
+/* 覆盖mint-ui的primary颜色，改为自己UI的主题色 */
+$color-primary: #E95A34;
+$design_width: 375;
+@function convertToVw($size: 0) {
+  @return (($size * 100 / $design_width) + vw);
+}
+input{
+  outline:none;
+}
+.clearfix:after {
+  //清除浮动
+  content: "020";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  //清除浮动
+  /* 触发 hasLayout */
+  zoom: 1;
+}
+.mint-header {
+  background-color: $color-primary;
+  box-sizing: border-box;
+  line-height: 1.8;
+  .is-left{
+    .mint-button{
+      width: 2rem;
+    }
+  }
+}
+.mint-button:not(.is-disabled):active::after {
+    opacity: .2 /* .6 */
+}
+.mint-button--primary {
+    background-color: $color-primary;
+}
+.mint-button--primary.is-plain {
+    border: 1px solid $color-primary;
+    color: $color-primary
+}
+.mint-badge.is-primary {
+  background-color: $color-primary
+}
+.mint-switch-input:checked + .mint-switch-core {
+  border-color: $color-primary;
+  background-color: $color-primary;
+}
+.mint-navbar .mint-tab-item.is-selected {
+  border-bottom: 3px solid $color-primary;
+  color: $color-primary;
+}
+.mint-tabbar > .mint-tab-item.is-selected {
+  color: $color-primary;
+}
+.mint-searchbar-cancel {
+  color: $color-primary;
+}
+.mint-checkbox-input:checked + .mint-checkbox-core {
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+.mint-radio-input:checked + .mint-radio-core {
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+.mt-range-progress {
+  background-color: $color-primary;
+}
+.mt-progress-progress {
+  background-color: $color-primary;
+}
+.mint-msgbox-confirm {
+  color: $color-primary;
+}
+.mint-msgbox-confirm:active {
+  color: $color-primary;
+}
+.mint-datetime-action {
+  color: $color-primary;
+}
+
+.flexable {
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+.logInput .mint-field-core{
+  padding:0 0 0 1.9rem;
+  font-size: .8rem
+}
+.pswput .mint-field-core{
+  font-size: .8rem
+}
+.marginWidth{
+  width:90%;
+  margin:0 auto
+}
+//cell
+.mint-cell{
+  min-height: 3rem;
+  //border-bottom: solid 0.03rem #d2d2d2;
+}
+.mint-cell-text {
+  vertical-align: middle;
+  width: 2.7rem;
+  height: 0.68rem;
+  font-family: PingFang-SC-Regular;
+  font-size: 0.7rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0rem;
+  letter-spacing: 0rem;
+  color: #636363;
+  margin-left: 0.73rem
+}
+.mint-cell-allow-right::after {
+  right: 5px;
+  width: 0.28rem;
+    height: 0.28rem;
+  border: solid 1px #636363;
+  border-bottom-width:0;
+  border-left-width:0;
+  margin-left: .6rem;
+}
+.mint-cell-wrapper{
+  padding: 0px;
+}
+.list-body{
+  padding: 0 1rem;
+}
+//search
+.mint-search {
+  height: auto;
+}
+.mint-searchbar-inner{
+  border-radius: 0.83rem;
+}
+.mint-searchbar{
+  width: 90%;
+  margin: 0.45rem 0.75rem;
+  background: #ffffff;
+  padding: 0px;
+  border-radius: 0.83rem;
+}
+.mint-searchbar-inner .mintui-search {
+  font-size: 1.05rem;
+  color: #d9d9d9;
+  margin-right: 0.53rem;
+}
+.mint-searchbar-core {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  outline: 0;
+  font-family: SourceHanSansCN-Regular;
+  font-size: 0.6rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 2.4rem;
+  letter-spacing: 0rem;
+  color: #d2d2d2;
+}
+.mint-searchbar-cancel{
+  margin-right: 13px;
+}
+
+//container
+.container{
+  position: absolute;
+  top: 40px;
+  width:100%;
+}
+.paddingBottom{
+  padding-bottom: 52px; ;
+}
+.step .mint-field-core{
+  font-size: 0.6rem;
+  color: #636363;
+}
+.step .mint-cell-text{
+  color: #0d0d0d;
+  margin-left: 0;
+}
+.step .mint-cell-value {
+  font-size: 0.6rem;
+}
+//line
+.splitline{
+  width: 100%;
+  height: 0.03rem ;
+  background-color: #e5e5e5;
+}
+.radius-btn{
+  border-radius: 1.01rem;
+}
+.right .mint-field-core{
+  text-align: right;
+}
+.mint-cell-wrapper{
+  background-position: bottom left;
+}
+.warp-cell .mint-cell-value{
+  flex-direction:column;
+  line-height:1.2rem ;
+  width:11rem
+}
+.text-overflow{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.other-request .mint-cell-value{
+  width: 65%;
+  justify-content: flex-end;
+}
+.emergercy .mint-cell-title{
+  width: 116px;
+}
+.confirm-btngroup{
+  margin-top: 0.83rem;
+}
+.confirm-btn{
+  background-color: #e84518;
+  border-radius: 1rem;
+  font-family: PingFang-SC-Medium;
+  font-size: 0.75rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0rem;
+  letter-spacing: 0.04rem;
+  color: #ffffff;
+  padding: 0.53rem 1rem;
+}
+.cancel-btn{
+  background-color: #ffffff;
+  border: solid 0.03rem #e84518;
+  border-radius: 1rem;
+  font-family: PingFang-SC-Medium;
+  font-size: 0.75rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 0rem;
+  letter-spacing: 0.04rem;
+  color: #e84518;
+  padding: 0.53rem 1rem;
+  margin-left: 0.7rem;
+}
+.confirm-title{
+  font-family: PingFang-SC-Regular;
+  font-size: 0.75rem;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 1.2rem;
+  letter-spacing: 0rem;
+  color: #0d0d0d;
+}
+.u-mask{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  margin: 0 !important;
+
+}
+.u-confirm{
+  width: 12rem;
+  height: 6.65rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  padding: 0.93rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.black .mint-cell-text{//mint-cell样式
+  color: #0d0d0d;
+  font-size: 0.75rem;
+  margin-left: 0;
+}
+.content_margin{
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+.inputRadius{
+  border: none;
+  border-radius: 0.89rem;
+  border: solid 1px #dcdcdc;
+}
+.mint-popup {
+  width: 100%;
+}
+input{
+  -webkit-appearance: none;
+}
+.sum .mint-cell-text{
+  margin-left: 0px;
+}
+.num_salary .mint-cell-title {
+  width: 128px;
+}
+ .searchinp .mint-cell-wrapper{
+  background-color: #f5f5f5;
+}
+.searchinp .mint-field-core{
+  border-radius: 0.83rem;
+  padding: 0 36px;
+}
+.rText .mint-field-core{
+  text-align: right;
+  color: rgb(136, 136, 136);
+  font-size: .7rem
+}
+.mint-field .mint-cell-title{
+  width:130px;
+}
+.mint-field.pswput .mint-cell-title{
+  width:120px;
+}
+.slary_cell .mint-cell-value{
+  flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 13rem;
+}
+.mint-header-title{
+  -webkit-box-flex: 4;
+  -ms-flex: 4;
+  flex: 4;
+}
+.sum .mint-cell-text{
+  font-size: 0.75rem;
+  color:#262626;
+}
+.f5 .mint-cell-wrapper{
+  background: #f5f5f5;
+}
+.mint-field-core{
+  font-size: 16px;
+}
+.mint-field-core::placeholder{
+  font-size: .6rem;
+}
+.tc{
+  text-align: center;
+}
+.f13{
+  font-size:convertToVw(13);
+}
+.f14{
+  font-size:convertToVw(14);
+}
+.mt0{
+  margin-top: 0 !important;
+}
+.p10{
+  padding:convertToVw(10);
+}
+.p20{
+  padding:convertToVw(20);
+}
+
+.pt40 {
+  padding-top: 40px !important;
+}
+
+.bg-fff {
+  background-color: #fff;
+}
+.linebdt {
+  border-top: 1px solid #D9D9D9;
+}
+.linebdb {
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.tc {
+  text-align: center;
+}
+
+.f13 {
+  font-size: convertToVw(13);
+}
+.f16 {
+  font-size: convertToVw(16);
+}
+.f30 {
+  font-size: convertToVw(30);
+}
+.p20 {
+  padding: convertToVw(20);
+}
+.co-666 {
+  color: #666 !important;
+}
+.co-999 {
+  color: #969799;
+}
+
+.co-111{
+  color: #111111;
+}
+.co-orange{
+  color:#E95A34;
+}
+.co-blue{
+  color:#3296FA;
+}
+.pb5{
+  padding-bottom:.5rem;
+}
+.pt5{
+  padding-top:convertToVw(5);
+}
+.pt10{
+  padding-top:convertToVw(10);
+}
+.pl10{
+  padding-left:convertToVw(10);
+}
+.pl20{
+  padding-left:convertToVw(20);
+}
+.pr10{
+  padding-right:convertToVw(10);
+}
+.pr20{
+  padding-right:convertToVw(20);
+}
+.pt15{
+  padding-top:convertToVw(15);
+}
+.pb15{
+  padding-bottom:convertToVw(15);
+}
+.pb10{
+  padding-bottom:convertToVw(10);
+}
+.pb3{
+  padding-bottom:.3rem;
+}
+.w80{
+  width: 80%;
+}
+.w20{
+  width: 20%;
+}
+.picker-toolbar{
+  border-bottom:1px solid #D9D9D9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .sure{
+    width:80px;
+    text-align: center;
+    color: #D53D17;
+  }
+}
+.manger-popup{
+  position: fixed;
+  z-index:1000;
+  left: 0;
+  right:0;
+  bottom:0;
+  background-color: #fff;
+  .manger-top{
+    display: flex;
+    height:convertToVw(46);
+    justify-content: space-between;
+    align-items: center;
+    span{
+      padding: convertToVw(10) convertToVw(20);
+    }
+  }
+  .mint-checklist-title{
+    margin: 0;
+  }
+  .manger-content{
+    height:convertToVw(184);
+    overflow-y:scroll;
+    padding-left: convertToVw(15);
+    .mint-checkbox.is-right{
+      margin-right: convertToVw(10);
+    }
+    .mint-cell{
+      height:convertToVw(46);
+      min-height:convertToVw(46);
+    }
+    .mint-checklist-label{
+      padding-left: 0;
+    }
+  }
+}
+::-webkit-scrollbar {
+  width:2px; /*对垂直流动条有效*/
+  height:2px; /*对水平流动条有效*/
+}
+.share-box{
+  display: flex;
+  height:convertToVw(70);
+  justify-content:space-between;
+  align-items: center;
+  background-color:#3296FA;
+  color: #fff;
+  padding:0 convertToVw(10);
+  .share-l{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    .share-icon{
+      display: flex;
+      width:convertToVw(42);
+      height: convertToVw(42);
+    }
+    .share-title{
+      margin-left: convertToVw(12);
+      h3{
+        font-size: convertToVw(18);
+      }
+      span{
+        font-size: convertToVw(10);
+      }
+    }
+  }
+  .share-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    width: convertToVw(48);
+    height: convertToVw(30);
+    font-size: convertToVw(14);
+    border-radius: convertToVw(3);
+  }
+}
+.punch-box{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:40px;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999;
+  .wait-img{
+    display:inline-block;
+    width: 45%;
+  }
+}
+.my-alipay{
+  .mint-switch-core{
+    width: convertToVw(46);
+    height: convertToVw(24);
+  }
+  .mint-switch-core::after,.mint-switch-core::before{
+    height:convertToVw(22);
+    width:convertToVw(22);
+    border-radius: convertToVw(11);
+  }
+}
+.mint-navbar .mint-tab-item{
+  padding:convertToVw(0);
+  height: convertToVw(43);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: convertToVw(14);
+}

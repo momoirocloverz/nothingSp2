@@ -1,0 +1,35 @@
+$mainColor: #E95A34;
+$design_width: 375;
+@function convertToVw($size: 0) {
+  @return (($size * 100 / $design_width) + vw);
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+.lh17{
+  line-height:1.7;
+}
+.lh20{
+  line-height: 2;
+}
+.lh22{
+  line-height: 2.2;
+}
+.lh24{
+  line-height: 2.4;
+}
+.lh26{
+  line-height: 2.6;
+}
+.lh28{
+  line-height: 2.8;
+}
+.lh30{
+  line-height: 3;
+}
+.fb{
+  font-weight: bold;
+}

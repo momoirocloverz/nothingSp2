@@ -1,0 +1,463 @@
+$design_width: 375;
+
+@function convertToVw($size: 0) {
+  @return (($size * 100 / $design_width) + vw);
+}
+
+.headman {
+  .dropDown {
+    width: 100px;
+    padding: 10px 10px;
+    position: absolute;
+    top: 2.2rem;
+    right: 0;
+    z-index: 99;
+  }
+
+  .view {
+    width: 18px;
+    height: 18px;
+  }
+
+  .top-popup {
+    top: 2rem;
+    left: 79%;
+    width: 180px;
+    text-align: center;
+    border-radius: 6px;
+  }
+
+  .child {
+    color: #636363;
+    padding: 10px 2px;
+  }
+
+  .line {
+    height: 1px;
+    background-color: #e5e5e5;
+    width: 100%;
+  }
+
+  .info {
+    font-size: 0.6rem;
+    color: #636363;
+    margin-top: 0.5rem;
+  }
+
+  .headman {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+  }
+
+  .white {
+    background: #fff;
+  }
+
+  .content_fff {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .content_fff1 {
+    width: 95%;
+    margin: 2rem auto 0;
+    padding-top: 0.2rem;
+  }
+
+  .head {
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: solid 1px #e5e5e5;
+  }
+
+  .codeBtn {
+    min-width: 3.5rem;
+    height: 1.68rem;
+    border-radius: 0.82rem;
+    border: solid 1px #e84518;
+    font-size: 0.55rem;
+    color: #d6522d;
+    background: #fff;
+  }
+
+  .selectBox {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back {
+    margin-left: 0.2rem;
+  }
+
+  .r-content {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .multi-punch {
+    display: flex;
+    align-items: center;
+    height: convertToVw(18);
+    font-size: convertToVw(13);
+    line-height: convertToVw(18);
+    color: #6e7075;
+    padding-bottom: convertToVw(14);
+  }
+
+  .multi-icon {
+    display: inline-block;
+    width: convertToVw(18);
+    height: convertToVw(18);
+    margin-right: convertToVw(10);
+    background-image: url(../../../assets/img/check-uncheck.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &.can {
+      background-image: url(../../../assets/img/check-checked.png);
+    }
+  }
+
+  .rLine {
+    width: 4px;
+    background: #e84518;
+    height: 2.3rem;
+    margin-right: 0.5rem;
+  }
+
+  .h-content {
+    height: 3.3rem;
+    line-height: 1.1rem;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .h-btn {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .industry {
+    font-size: 0.9rem;
+    color: #0d0d0d;
+    width: 3.6rem;
+  }
+
+  .num {
+    font-size: 0.6rem;
+    color: #636363;
+  }
+
+  .people {
+    margin-right: 0.2rem;
+  }
+
+  .tag-male {
+    font-size: 0.6rem;
+    color: #3cca54;
+    margin-right: 0.5rem;
+  }
+
+  .tag-female {
+    font-size: 0.6rem;
+    color: #e84518;
+    margin-right: 0.5rem;
+  }
+
+  .tag-age {
+    font-size: 0.6rem;
+    color: #636363;
+    margin-right: 0.5rem;
+  }
+
+  .name {
+    font-size: 0.9rem;
+    color: #0d0d0d;
+    width: 7.5rem;
+  }
+
+  .infoBox {
+    margin-top: 0.5rem;
+  }
+
+  .source {
+    font-size: 0.65rem;
+    color: #0d0d0d;
+  }
+
+  .schedule {
+    font-size: 0.65rem;
+    color: #636363;
+  }
+
+  .task {
+    font-size: 0.65rem;
+    color: #026bf9;
+  }
+
+  .taskBox {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sourceBox {
+    justify-content: flex-start;
+    line-height: 1.8rem;
+  }
+
+  .sourceBox1 {
+    justify-content: flex-start;
+    line-height: 1.4rem;
+  }
+
+  .update-panel {
+    position: relative;
+  }
+
+  // .update-attendence {
+  //   position: absolute;
+  //   padding: 0 10px;
+  //   line-height: 1.5;
+  //   right: 5px;
+  //   bottom: 3px;
+  //   border: 1px solid #d9d9d9;
+  // }
+
+  .btn-div {
+    text-align: right;
+  }
+
+  .update-attende {
+    display: inline-block;
+  }
+
+  .uncheck {
+    font-size: 0.65rem;
+    color: #e20000;
+  }
+
+  .goCheck {
+    font-size: 0.65rem;
+    color: #0d0d0d;
+  }
+
+  .time {
+    font-size: 0.65rem;
+    color: #636363;
+    margin-right: 0.23rem;
+  }
+
+  .cardBox {
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 1.4rem;
+  }
+
+  .workTime {
+    width: 50%;
+  }
+
+  .agree {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .agreeText {
+    font-size: 0.7rem;
+    color: #e94418;
+    width: 2.65rem;
+    height: 1.3rem;
+    border: solid 0.05rem #e94418;
+    text-align: center;
+    line-height: 1.4rem;
+    border-radius: 0.15rem;
+  }
+
+  .repulseText {
+    font-size: 0.7rem;
+    color: #fff;
+    width: 2.75rem;
+    height: 1.4rem;
+    background: #e94418;
+    text-align: center;
+    line-height: 1.4rem;
+    border-radius: 0.15rem;
+    margin-left: 0.5rem;
+  }
+
+  .btnbOX {
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 0.5rem;
+  }
+
+  .countNum {
+    width: 14rem;
+  }
+
+  .personInfo {
+    margin-top: 0.5rem;
+  }
+
+  .rightDiv {
+    position: fixed;
+    right: 0;
+    top: 8rem;
+    list-style: none;
+  }
+
+  .list {
+    font-size: 0.65rem;
+    font-weight: normal;
+    font-stretch: normal;
+    letter-spacing: 0.01rem;
+    color: #0d0d0d;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .selected {
+    color: #e84518 !important;
+  }
+
+  .drawer {
+    height: 100%;
+    margin-top: -34rem;
+  }
+
+  .ulBox {
+    padding: 2.2rem 1rem 0;
+    position: relative;
+    width: 6rem;
+  }
+
+  .ulBox li {
+    line-height: 1.4rem;
+    color: #333;
+  }
+
+  .menu {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100px;
+  }
+
+  .menuOuter {
+    width: 2.03rem;
+    height: 2.95rem;
+    position: fixed;
+    top: 50%;
+    right: 0;
+  }
+
+  .menuInner {
+    width: 2.03rem;
+    height: 2.95rem;
+    position: absolute;
+    top: 50%;
+  }
+
+  .title-d {
+    font-size: 0.6rem;
+  }
+
+  .sexInfo {
+    padding-top: 0.3rem;
+  }
+
+  .topBox {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .arrow {
+    width: 10px;
+    height: 6px;
+    margin-left: 6px;
+  }
+
+  .uncard {
+    color: #e84518;
+  }
+
+  .normal {
+    color: #3cca54;
+  }
+
+  .nomore {
+    color: #b4b1b1;
+    font-size: 0.6rem;
+    text-align: center;
+    padding: 2rem 0;
+  }
+
+  .modal {
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .white11 {
+    width: 90%;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    margin-bottom: 1.18rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .comfirmBtn {
+    width: 3.2rem;
+    height: 1.75rem;
+    border-radius: 0.88rem;
+    font-size: 0.7rem;
+    margin: 0.8rem;
+  }
+
+  .comfirmBtn1 {
+    width: 3.2rem;
+    height: 1.75rem;
+    border-radius: 0.88rem;
+    font-size: 0.7rem;
+    color: #e84518;
+    border: 1px solid #e84518;
+  }
+
+  .btnDiv {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bg {
+    background: #000;
+    opacity: 0.5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  }
+
+  .countInput {
+    width: 4.7rem;
+    height: 1.45rem;
+    border: solid 1px #dcdcdc;
+    padding: 0 0.5rem;
+    margin-right: 0.48rem;
+  }
+
+  .sure {
+    float: right;
+    padding: 5px;
+    color: #666;
+    margin: 5px 5px 0 0;
+  }
+}
